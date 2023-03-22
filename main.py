@@ -20,6 +20,21 @@ def encode(password):
         res += str(new_digit)
     return res
 
+#Tiffany Vo
+def decode(encoded_password):
+    decoded_pass = ""
+    new_char = ""
+    for i in password:
+        if int(i) == 0:
+            new_char = "7"
+        elif int(i) == 1:
+            new_char = "8"
+        elif int(2) == 2:
+            new_char = "9"
+        else:
+            new_char = str(int(i) + 3)
+        decoded_pass += new_char
+    return
 
 if __name__ == "__main__":
     soft_eng = True
@@ -34,6 +49,7 @@ if __name__ == "__main__":
             en_password = encode(password)  # encode password, create variable for it
         elif option == 2:
             # output the encoded passcode and original
-            print(f"The encoded password is {en_password}, and the original password is {password}")
+            decoded_pass = decode(en_password)
+            print(f"The encoded password is {en_password}, and the original password is {decoded_pass}")
         else:
             break

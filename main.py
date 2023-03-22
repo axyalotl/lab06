@@ -32,7 +32,7 @@ def decode(encoded_password):
         elif int(2) == 2:
             new_char = "9"
         else:
-            new_char = str(int(i) + 3)
+            new_char = str(int(i) - 3)
         decoded_pass += new_char
     return
 

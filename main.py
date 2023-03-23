@@ -20,11 +20,12 @@ def encode(password):
         res += str(new_digit)
     return res
 
-#Tiffany Vo
+
+# Tiffany Vo
 def decode(encoded_password):
     decoded_pass = ""
     new_char = ""
-    for i in password:
+    for i in encoded_password:
         if int(i) == 0:
             new_char = "7"
         elif int(i) == 1:
@@ -34,7 +35,8 @@ def decode(encoded_password):
         else:
             new_char = str(int(i) - 3)
         decoded_pass += new_char
-    return
+    return decoded_pass
+
 
 if __name__ == "__main__":
     soft_eng = True
